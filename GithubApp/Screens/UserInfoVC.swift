@@ -1,13 +1,13 @@
 //
-//  SearchVC.swift
+//  UserInfoVC.swift
 //  GithubApp
 //
-//  Created by Enes Sancar on 27.07.2023.
+//  Created by Enes Sancar on 28.07.2023.
 //
 
 import UIKit
 
-class SearchVC: UIViewController {
+class UserInfoVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
