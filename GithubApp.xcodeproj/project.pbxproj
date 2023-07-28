@@ -19,6 +19,8 @@
 		EC51E96F2A73B75D001194E1 /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC51E96E2A73B75D001194E1 /* ErrorMessage.swift */; };
 		EC51E9712A73BAD0001194E1 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC51E9702A73BAD0001194E1 /* UIHelper.swift */; };
 		EC51E9732A73C0D7001194E1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC51E9722A73C0D7001194E1 /* Constants.swift */; };
+		EC51E9792A73C551001194E1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC51E9782A73C551001194E1 /* User.swift */; };
+		EC51E97B2A73C682001194E1 /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC51E97A2A73C682001194E1 /* Follower.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		EC51E96E2A73B75D001194E1 /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
 		EC51E9702A73BAD0001194E1 /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		EC51E9722A73C0D7001194E1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		EC51E9782A73C551001194E1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		EC51E97A2A73C682001194E1 /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,10 @@
 			isa = PBXGroup;
 			children = (
 				EC51E96D2A73A47F001194E1 /* Utils */,
+				EC51E9742A73C3B0001194E1 /* Managers */,
+				EC51E9762A73C46D001194E1 /* Models */,
+				EC51E9772A73C485001194E1 /* Extensions */,
+				EC51E9752A73C464001194E1 /* Customviews */,
 				EC51E9662A73A3B3001194E1 /* Screens */,
 				EC51E9642A72F4C2001194E1 /* Support */,
 			);
@@ -123,6 +131,36 @@
 				EC51E9722A73C0D7001194E1 /* Constants.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		EC51E9742A73C3B0001194E1 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		EC51E9752A73C464001194E1 /* Customviews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Customviews;
+			sourceTree = "<group>";
+		};
+		EC51E9762A73C46D001194E1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EC51E9782A73C551001194E1 /* User.swift */,
+				EC51E97A2A73C682001194E1 /* Follower.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EC51E9772A73C485001194E1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,9 +240,11 @@
 				EC51E96F2A73B75D001194E1 /* ErrorMessage.swift in Sources */,
 				EC51E9732A73C0D7001194E1 /* Constants.swift in Sources */,
 				EC51E9712A73BAD0001194E1 /* UIHelper.swift in Sources */,
+				EC51E97B2A73C682001194E1 /* Follower.swift in Sources */,
 				EC51E96C2A73A421001194E1 /* UserInfoVC.swift in Sources */,
 				EC51E94B2A72F323001194E1 /* AppDelegate.swift in Sources */,
 				EC51E94D2A72F323001194E1 /* SceneDelegate.swift in Sources */,
+				EC51E9792A73C551001194E1 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
