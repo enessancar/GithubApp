@@ -9,19 +9,23 @@
 /* Begin PBXBuildFile section */
 		EC51E94B2A72F323001194E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC51E94A2A72F323001194E1 /* AppDelegate.swift */; };
 		EC51E94D2A72F323001194E1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC51E94C2A72F323001194E1 /* SceneDelegate.swift */; };
-		EC51E94F2A72F323001194E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC51E94E2A72F323001194E1 /* ViewController.swift */; };
 		EC51E9542A72F325001194E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC51E9532A72F325001194E1 /* Assets.xcassets */; };
 		EC51E9572A72F325001194E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC51E9552A72F325001194E1 /* LaunchScreen.storyboard */; };
+		EC51E95F2A72F411001194E1 /* GFTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC51E95E2A72F411001194E1 /* GFTabBarController.swift */; };
+		EC51E9612A72F49A001194E1 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC51E9602A72F49A001194E1 /* SearchVC.swift */; };
+		EC51E9632A72F4BF001194E1 /* FavoritesListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC51E9622A72F4BF001194E1 /* FavoritesListVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EC51E9472A72F323001194E1 /* GithubApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC51E94A2A72F323001194E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC51E94C2A72F323001194E1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EC51E94E2A72F323001194E1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EC51E9532A72F325001194E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC51E9562A72F325001194E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC51E9582A72F325001194E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC51E95E2A72F411001194E1 /* GFTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTabBarController.swift; sourceTree = "<group>"; };
+		EC51E9602A72F49A001194E1 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
+		EC51E9622A72F4BF001194E1 /* FavoritesListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,32 @@
 		EC51E9492A72F323001194E1 /* GithubApp */ = {
 			isa = PBXGroup;
 			children = (
-				EC51E94A2A72F323001194E1 /* AppDelegate.swift */,
-				EC51E94C2A72F323001194E1 /* SceneDelegate.swift */,
-				EC51E94E2A72F323001194E1 /* ViewController.swift */,
-				EC51E9532A72F325001194E1 /* Assets.xcassets */,
-				EC51E9552A72F325001194E1 /* LaunchScreen.storyboard */,
-				EC51E9582A72F325001194E1 /* Info.plist */,
+				EC51E9642A72F4C2001194E1 /* Support */,
+				EC51E95E2A72F411001194E1 /* GFTabBarController.swift */,
+				EC51E9602A72F49A001194E1 /* SearchVC.swift */,
+				EC51E9622A72F4BF001194E1 /* FavoritesListVC.swift */,
 			);
 			path = GithubApp;
+			sourceTree = "<group>";
+		};
+		EC51E9642A72F4C2001194E1 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				EC51E9652A72F4E5001194E1 /* Delegate */,
+				EC51E9552A72F325001194E1 /* LaunchScreen.storyboard */,
+				EC51E9532A72F325001194E1 /* Assets.xcassets */,
+				EC51E9582A72F325001194E1 /* Info.plist */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		EC51E9652A72F4E5001194E1 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				EC51E94A2A72F323001194E1 /* AppDelegate.swift */,
+				EC51E94C2A72F323001194E1 /* SceneDelegate.swift */,
+			);
+			path = Delegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,7 +156,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC51E94F2A72F323001194E1 /* ViewController.swift in Sources */,
+				EC51E9632A72F4BF001194E1 /* FavoritesListVC.swift in Sources */,
+				EC51E95F2A72F411001194E1 /* GFTabBarController.swift in Sources */,
+				EC51E9612A72F49A001194E1 /* SearchVC.swift in Sources */,
 				EC51E94B2A72F323001194E1 /* AppDelegate.swift in Sources */,
 				EC51E94D2A72F323001194E1 /* SceneDelegate.swift in Sources */,
 			);
@@ -277,7 +301,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3KRQW7JR73;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = GithubApp/Info.plist;
+				INFOPLIST_FILE = GithubApp/Support/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -304,7 +328,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3KRQW7JR73;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = GithubApp/Info.plist;
+				INFOPLIST_FILE = GithubApp/Support/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
