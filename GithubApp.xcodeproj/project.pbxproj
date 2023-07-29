@@ -23,6 +23,9 @@
 		EC51E97B2A73C682001194E1 /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC51E97A2A73C682001194E1 /* Follower.swift */; };
 		EC51E9842A742EBC001194E1 /* GFButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC51E9832A742EBC001194E1 /* GFButton.swift */; };
 		EC51E9862A7433EA001194E1 /* GFTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC51E9852A7433EA001194E1 /* GFTextField.swift */; };
+		EC51E9892A745789001194E1 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = EC51E9882A745789001194E1 /* SnapKit */; };
+		EC83D49C2A75072D00138F9B /* GFTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC83D49B2A75072D00138F9B /* GFTitleLabel.swift */; };
+		EC83D49E2A7512E300138F9B /* GFBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC83D49D2A7512E300138F9B /* GFBodyLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +47,8 @@
 		EC51E97A2A73C682001194E1 /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
 		EC51E9832A742EBC001194E1 /* GFButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFButton.swift; sourceTree = "<group>"; };
 		EC51E9852A7433EA001194E1 /* GFTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTextField.swift; sourceTree = "<group>"; };
+		EC83D49B2A75072D00138F9B /* GFTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTitleLabel.swift; sourceTree = "<group>"; };
+		EC83D49D2A7512E300138F9B /* GFBodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFBodyLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC51E9892A745789001194E1 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,6 +220,8 @@
 		EC51E9812A742BB9001194E1 /* Labels */ = {
 			isa = PBXGroup;
 			children = (
+				EC83D49B2A75072D00138F9B /* GFTitleLabel.swift */,
+				EC83D49D2A7512E300138F9B /* GFBodyLabel.swift */,
 			);
 			path = Labels;
 			sourceTree = "<group>";
@@ -241,6 +249,9 @@
 			dependencies = (
 			);
 			name = GithubApp;
+			packageProductDependencies = (
+				EC51E9882A745789001194E1 /* SnapKit */,
+			);
 			productName = GithubApp;
 			productReference = EC51E9472A72F323001194E1 /* GithubApp.app */;
 			productType = "com.apple.product-type.application";
@@ -269,6 +280,9 @@
 				Base,
 			);
 			mainGroup = EC51E93E2A72F323001194E1;
+			packageReferences = (
+				EC51E9872A745789001194E1 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = EC51E9482A72F323001194E1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -298,9 +312,11 @@
 				EC51E96A2A73A407001194E1 /* FollowerListVC.swift in Sources */,
 				EC51E9632A72F4BF001194E1 /* FavoritesListVC.swift in Sources */,
 				EC51E9862A7433EA001194E1 /* GFTextField.swift in Sources */,
+				EC83D49C2A75072D00138F9B /* GFTitleLabel.swift in Sources */,
 				EC51E95F2A72F411001194E1 /* GFTabBarController.swift in Sources */,
 				EC51E9612A72F49A001194E1 /* SearchVC.swift in Sources */,
 				EC51E96F2A73B75D001194E1 /* ErrorMessage.swift in Sources */,
+				EC83D49E2A7512E300138F9B /* GFBodyLabel.swift in Sources */,
 				EC51E9732A73C0D7001194E1 /* Constants.swift in Sources */,
 				EC51E9712A73BAD0001194E1 /* UIHelper.swift in Sources */,
 				EC51E97B2A73C682001194E1 /* Follower.swift in Sources */,
@@ -516,6 +532,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EC51E9872A745789001194E1 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EC51E9882A745789001194E1 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EC51E9872A745789001194E1 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EC51E93F2A72F323001194E1 /* Project object */;
 }

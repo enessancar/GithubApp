@@ -7,11 +7,13 @@
 
 import UIKit
 
-class FollowerListVC: UIViewController {
+final class FollowerListVC: UIViewController {
 
+    var username: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .systemBackground
+        navigationController?.isNavigationBarHidden = false
     }
 }
