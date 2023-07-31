@@ -14,4 +14,5 @@ enum CustomError: String, Error {
     case invalidData = "The data recieved from the service was invalid. Please try again."
     case unableToFavorite = "There was an error favoriting user. Please try again."
     case alreadyInFavorites = "You've already favorited this user. You must really like them!"
+    case invalidURL = "The given url was invalid. Please give real URL."
 }

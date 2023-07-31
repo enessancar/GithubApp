@@ -85,7 +85,7 @@ final class GFAlertVC: UIViewController {
             make.top.equalTo(titleLabel.snp.bottom).offset(8)
             make.leading.equalTo(containerView.snp.leading).offset(padding)
             make.trailing.equalTo(containerView.snp.trailing).offset(-padding)
-            make.bottom.equalTo(actionButton.snp.bottom).offset(-12)
+            make.bottom.equalTo(actionButton.snp.top).offset(-12)
         }
     }
     
