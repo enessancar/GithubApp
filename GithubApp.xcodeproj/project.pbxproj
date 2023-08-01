@@ -35,6 +35,7 @@
 		EC8F9E712A7783CD00EF8D87 /* FollowerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8F9E702A7783CD00EF8D87 /* FollowerCell.swift */; };
 		EC8F9E732A78017E00EF8D87 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8F9E722A78017E00EF8D87 /* PersistenceManager.swift */; };
 		EC8F9E752A78ECEE00EF8D87 /* GFEmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8F9E742A78ECEE00EF8D87 /* GFEmptyStateView.swift */; };
+		EC8F9E772A79A5F700EF8D87 /* GFDataLoadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8F9E762A79A5F700EF8D87 /* GFDataLoadingVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +68,7 @@
 		EC8F9E702A7783CD00EF8D87 /* FollowerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerCell.swift; sourceTree = "<group>"; };
 		EC8F9E722A78017E00EF8D87 /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
 		EC8F9E742A78ECEE00EF8D87 /* GFEmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFEmptyStateView.swift; sourceTree = "<group>"; };
+		EC8F9E762A79A5F700EF8D87 /* GFDataLoadingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFDataLoadingVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				EC8F9E642A75140300EF8D87 /* GFAlertVC.swift */,
+				EC8F9E762A79A5F700EF8D87 /* GFDataLoadingVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 				EC8F9E672A751D8B00EF8D87 /* GFAlertContainerView.swift in Sources */,
 				EC51E96A2A73A407001194E1 /* FollowerListVC.swift in Sources */,
 				EC8F9E6F2A7716C400EF8D87 /* GFAvatarImageView.swift in Sources */,
+				EC8F9E772A79A5F700EF8D87 /* GFDataLoadingVC.swift in Sources */,
 				EC8F9E732A78017E00EF8D87 /* PersistenceManager.swift in Sources */,
 				EC8F9E6B2A7534B200EF8D87 /* UIViewController+Ext.swift in Sources */,
 				EC8F9E6D2A76AB6F00EF8D87 /* NetworkManager.swift in Sources */,
