@@ -24,6 +24,8 @@
 		EC8F9EDA2A7E3AA300EF8D87 /* GFSecondaryLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8F9ED92A7E3AA300EF8D87 /* GFSecondaryLabel.swift */; };
 		EC8F9EDC2A7E4B1D00EF8D87 /* GFBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8F9EDB2A7E4B1D00EF8D87 /* GFBodyLabel.swift */; };
 		EC8F9EDF2A7E4CB300EF8D87 /* GFTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8F9EDE2A7E4CB300EF8D87 /* GFTextField.swift */; };
+		EC8F9EE12A7E5A5E00EF8D87 /* GFButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8F9EE02A7E5A5E00EF8D87 /* GFButton.swift */; };
+		EC8F9EE52A7E5FFD00EF8D87 /* GFAvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8F9EE42A7E5FFD00EF8D87 /* GFAvatarImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		EC8F9ED92A7E3AA300EF8D87 /* GFSecondaryLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFSecondaryLabel.swift; sourceTree = "<group>"; };
 		EC8F9EDB2A7E4B1D00EF8D87 /* GFBodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFBodyLabel.swift; sourceTree = "<group>"; };
 		EC8F9EDE2A7E4CB300EF8D87 /* GFTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTextField.swift; sourceTree = "<group>"; };
+		EC8F9EE02A7E5A5E00EF8D87 /* GFButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFButton.swift; sourceTree = "<group>"; };
+		EC8F9EE42A7E5FFD00EF8D87 /* GFAvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAvatarImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +138,8 @@
 			children = (
 				EC8F9ED62A7E3A6F00EF8D87 /* Labels */,
 				EC8F9EDD2A7E4C9C00EF8D87 /* TextField */,
+				EC8F9EE22A7E5A6200EF8D87 /* Buttons */,
+				EC8F9EE32A7E5FD400EF8D87 /* ImageViews */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -154,6 +160,22 @@
 				EC8F9EDE2A7E4CB300EF8D87 /* GFTextField.swift */,
 			);
 			path = TextField;
+			sourceTree = "<group>";
+		};
+		EC8F9EE22A7E5A6200EF8D87 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				EC8F9EE02A7E5A5E00EF8D87 /* GFButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		EC8F9EE32A7E5FD400EF8D87 /* ImageViews */ = {
+			isa = PBXGroup;
+			children = (
+				EC8F9EE42A7E5FFD00EF8D87 /* GFAvatarImageView.swift */,
+			);
+			path = ImageViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,6 +260,8 @@
 				EC8F9EB02A7DB19000EF8D87 /* AppDelegate.swift in Sources */,
 				EC8F9ECC2A7E33D200EF8D87 /* NetworkManager.swift in Sources */,
 				EC8F9ECF2A7E347100EF8D87 /* User.swift in Sources */,
+				EC8F9EE12A7E5A5E00EF8D87 /* GFButton.swift in Sources */,
+				EC8F9EE52A7E5FFD00EF8D87 /* GFAvatarImageView.swift in Sources */,
 				EC8F9EC72A7E2E8B00EF8D87 /* UIHelper.swift in Sources */,
 				EC8F9EB22A7DB19000EF8D87 /* SceneDelegate.swift in Sources */,
 				EC8F9EC92A7E31E300EF8D87 /* Constants.swift in Sources */,
