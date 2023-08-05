@@ -29,6 +29,9 @@
 		EC8F9EF02A7E6F1400EF8D87 /* GFTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8F9EEF2A7E6F1400EF8D87 /* GFTabBarController.swift */; };
 		EC8F9EF22A7E6FD900EF8D87 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8F9EF12A7E6FD900EF8D87 /* SearchVC.swift */; };
 		EC8F9EF42A7E6FF500EF8D87 /* FavoritesListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8F9EF32A7E6FF500EF8D87 /* FavoritesListVC.swift */; };
+		EC8F9EF62A7E75A900EF8D87 /* FollowerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8F9EF52A7E75A900EF8D87 /* FollowerCell.swift */; };
+		EC8F9EF92A7E832B00EF8D87 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = EC8F9EF82A7E832B00EF8D87 /* SnapKit */; };
+		EC8F9EFB2A7E84A300EF8D87 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8F9EFA2A7E84A300EF8D87 /* UIView+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +59,8 @@
 		EC8F9EEF2A7E6F1400EF8D87 /* GFTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTabBarController.swift; sourceTree = "<group>"; };
 		EC8F9EF12A7E6FD900EF8D87 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		EC8F9EF32A7E6FF500EF8D87 /* FavoritesListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListVC.swift; sourceTree = "<group>"; };
+		EC8F9EF52A7E75A900EF8D87 /* FollowerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerCell.swift; sourceTree = "<group>"; };
+		EC8F9EFA2A7E84A300EF8D87 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC8F9EF92A7E832B00EF8D87 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				EC8F9ED32A7E3A4800EF8D87 /* UIViewController+Ext.swift */,
+				EC8F9EFA2A7E84A300EF8D87 /* UIView+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -209,6 +216,7 @@
 		EC8F9EEB2A7E6B8400EF8D87 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				EC8F9EF52A7E75A900EF8D87 /* FollowerCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -259,6 +267,9 @@
 			dependencies = (
 			);
 			name = GithubFollowers;
+			packageProductDependencies = (
+				EC8F9EF82A7E832B00EF8D87 /* SnapKit */,
+			);
 			productName = GithubFollowers;
 			productReference = EC8F9EAC2A7DB19000EF8D87 /* GithubFollowers.app */;
 			productType = "com.apple.product-type.application";
@@ -287,6 +298,9 @@
 				Base,
 			);
 			mainGroup = EC8F9EA32A7DB19000EF8D87;
+			packageReferences = (
+				EC8F9EF72A7E832B00EF8D87 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = EC8F9EAD2A7DB19000EF8D87 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -325,8 +339,10 @@
 				EC8F9EF22A7E6FD900EF8D87 /* SearchVC.swift in Sources */,
 				EC8F9EB02A7DB19000EF8D87 /* AppDelegate.swift in Sources */,
 				EC8F9ECC2A7E33D200EF8D87 /* NetworkManager.swift in Sources */,
+				EC8F9EFB2A7E84A300EF8D87 /* UIView+Ext.swift in Sources */,
 				EC8F9EF42A7E6FF500EF8D87 /* FavoritesListVC.swift in Sources */,
 				EC8F9ECF2A7E347100EF8D87 /* User.swift in Sources */,
+				EC8F9EF62A7E75A900EF8D87 /* FollowerCell.swift in Sources */,
 				EC8F9EE12A7E5A5E00EF8D87 /* GFButton.swift in Sources */,
 				EC8F9EE52A7E5FFD00EF8D87 /* GFAvatarImageView.swift in Sources */,
 				EC8F9EF02A7E6F1400EF8D87 /* GFTabBarController.swift in Sources */,
@@ -540,6 +556,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EC8F9EF72A7E832B00EF8D87 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EC8F9EF82A7E832B00EF8D87 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EC8F9EF72A7E832B00EF8D87 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EC8F9EA42A7DB19000EF8D87 /* Project object */;
 }
