@@ -16,6 +16,9 @@
 		EC8F9EC52A7E2CBA00EF8D87 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8F9EC42A7E2CBA00EF8D87 /* CustomError.swift */; };
 		EC8F9EC72A7E2E8B00EF8D87 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8F9EC62A7E2E8B00EF8D87 /* UIHelper.swift */; };
 		EC8F9EC92A7E31E300EF8D87 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8F9EC82A7E31E300EF8D87 /* Constants.swift */; };
+		EC8F9ECC2A7E33D200EF8D87 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8F9ECB2A7E33D200EF8D87 /* NetworkManager.swift */; };
+		EC8F9ECF2A7E347100EF8D87 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8F9ECE2A7E347100EF8D87 /* User.swift */; };
+		EC8F9ED12A7E348C00EF8D87 /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8F9ED02A7E348C00EF8D87 /* Follower.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		EC8F9EC42A7E2CBA00EF8D87 /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
 		EC8F9EC62A7E2E8B00EF8D87 /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		EC8F9EC82A7E31E300EF8D87 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		EC8F9ECB2A7E33D200EF8D87 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		EC8F9ECE2A7E347100EF8D87 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		EC8F9ED02A7E348C00EF8D87 /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,8 @@
 			isa = PBXGroup;
 			children = (
 				EC8F9EC32A7E2C9C00EF8D87 /* Utils */,
+				EC8F9ECA2A7E33C400EF8D87 /* Managers */,
+				EC8F9ECD2A7E345E00EF8D87 /* Models */,
 				EC8F9EAF2A7DB19000EF8D87 /* AppDelegate.swift */,
 				EC8F9EB12A7DB19000EF8D87 /* SceneDelegate.swift */,
 				EC8F9EB32A7DB19000EF8D87 /* ViewController.swift */,
@@ -82,6 +90,23 @@
 				EC8F9EC82A7E31E300EF8D87 /* Constants.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		EC8F9ECA2A7E33C400EF8D87 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				EC8F9ECB2A7E33D200EF8D87 /* NetworkManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		EC8F9ECD2A7E345E00EF8D87 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EC8F9ECE2A7E347100EF8D87 /* User.swift */,
+				EC8F9ED02A7E348C00EF8D87 /* Follower.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,8 +181,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC8F9EB42A7DB19000EF8D87 /* ViewController.swift in Sources */,
+				EC8F9ED12A7E348C00EF8D87 /* Follower.swift in Sources */,
 				EC8F9EC52A7E2CBA00EF8D87 /* CustomError.swift in Sources */,
 				EC8F9EB02A7DB19000EF8D87 /* AppDelegate.swift in Sources */,
+				EC8F9ECC2A7E33D200EF8D87 /* NetworkManager.swift in Sources */,
+				EC8F9ECF2A7E347100EF8D87 /* User.swift in Sources */,
 				EC8F9EC72A7E2E8B00EF8D87 /* UIHelper.swift in Sources */,
 				EC8F9EB22A7DB19000EF8D87 /* SceneDelegate.swift in Sources */,
 				EC8F9EC92A7E31E300EF8D87 /* Constants.swift in Sources */,
