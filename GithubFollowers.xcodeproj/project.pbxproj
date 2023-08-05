@@ -13,6 +13,7 @@
 		EC8F9EB72A7DB19000EF8D87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC8F9EB52A7DB19000EF8D87 /* Main.storyboard */; };
 		EC8F9EB92A7DB19200EF8D87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC8F9EB82A7DB19200EF8D87 /* Assets.xcassets */; };
 		EC8F9EBC2A7DB19200EF8D87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC8F9EBA2A7DB19200EF8D87 /* LaunchScreen.storyboard */; };
+		EC8F9EC52A7E2CBA00EF8D87 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8F9EC42A7E2CBA00EF8D87 /* CustomError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		EC8F9EB82A7DB19200EF8D87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC8F9EBB2A7DB19200EF8D87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC8F9EBD2A7DB19200EF8D87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC8F9EC42A7E2CBA00EF8D87 /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		EC8F9EAE2A7DB19000EF8D87 /* GithubFollowers */ = {
 			isa = PBXGroup;
 			children = (
+				EC8F9EC32A7E2C9C00EF8D87 /* Utils */,
 				EC8F9EAF2A7DB19000EF8D87 /* AppDelegate.swift */,
 				EC8F9EB12A7DB19000EF8D87 /* SceneDelegate.swift */,
 				EC8F9EB32A7DB19000EF8D87 /* ViewController.swift */,
@@ -65,6 +68,14 @@
 				EC8F9EBD2A7DB19200EF8D87 /* Info.plist */,
 			);
 			path = GithubFollowers;
+			sourceTree = "<group>";
+		};
+		EC8F9EC32A7E2C9C00EF8D87 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				EC8F9EC42A7E2CBA00EF8D87 /* CustomError.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC8F9EB42A7DB19000EF8D87 /* ViewController.swift in Sources */,
+				EC8F9EC52A7E2CBA00EF8D87 /* CustomError.swift in Sources */,
 				EC8F9EB02A7DB19000EF8D87 /* AppDelegate.swift in Sources */,
 				EC8F9EB22A7DB19000EF8D87 /* SceneDelegate.swift in Sources */,
 			);
