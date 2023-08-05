@@ -9,8 +9,10 @@ import UIKit
 
 final class GFAlertContainerView: UIView {
     
+    //MARK: - Init
     override init(frame: CGRect) {
         super.init(frame: frame)
+        configure()
     }
     
     required init?(coder: NSCoder) {
