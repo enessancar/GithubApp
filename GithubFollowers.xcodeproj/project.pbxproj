@@ -15,6 +15,7 @@
 		EC8F9EBC2A7DB19200EF8D87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC8F9EBA2A7DB19200EF8D87 /* LaunchScreen.storyboard */; };
 		EC8F9EC52A7E2CBA00EF8D87 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8F9EC42A7E2CBA00EF8D87 /* CustomError.swift */; };
 		EC8F9EC72A7E2E8B00EF8D87 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8F9EC62A7E2E8B00EF8D87 /* UIHelper.swift */; };
+		EC8F9EC92A7E31E300EF8D87 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8F9EC82A7E31E300EF8D87 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		EC8F9EBD2A7DB19200EF8D87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC8F9EC42A7E2CBA00EF8D87 /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
 		EC8F9EC62A7E2E8B00EF8D87 /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
+		EC8F9EC82A7E31E300EF8D87 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 			children = (
 				EC8F9EC42A7E2CBA00EF8D87 /* CustomError.swift */,
 				EC8F9EC62A7E2E8B00EF8D87 /* UIHelper.swift */,
+				EC8F9EC82A7E31E300EF8D87 /* Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -157,6 +160,7 @@
 				EC8F9EB02A7DB19000EF8D87 /* AppDelegate.swift in Sources */,
 				EC8F9EC72A7E2E8B00EF8D87 /* UIHelper.swift in Sources */,
 				EC8F9EB22A7DB19000EF8D87 /* SceneDelegate.swift in Sources */,
+				EC8F9EC92A7E31E300EF8D87 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
