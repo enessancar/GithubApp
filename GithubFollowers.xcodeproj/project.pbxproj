@@ -95,12 +95,6 @@
 				EC8F9ED52A7E3A6500EF8D87 /* CustomViews */,
 				EC8F9EED2A7E6BB000EF8D87 /* Screens */,
 				EC8F9EEE2A7E6BC000EF8D87 /* Support */,
-				EC8F9EAF2A7DB19000EF8D87 /* AppDelegate.swift */,
-				EC8F9EB12A7DB19000EF8D87 /* SceneDelegate.swift */,
-				EC8F9EB32A7DB19000EF8D87 /* ViewController.swift */,
-				EC8F9EBA2A7DB19200EF8D87 /* LaunchScreen.storyboard */,
-				EC8F9EB82A7DB19200EF8D87 /* Assets.xcassets */,
-				EC8F9EBD2A7DB19200EF8D87 /* Info.plist */,
 			);
 			path = GithubFollowers;
 			sourceTree = "<group>";
@@ -239,6 +233,12 @@
 		EC8F9EEE2A7E6BC000EF8D87 /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				EC8F9EAF2A7DB19000EF8D87 /* AppDelegate.swift */,
+				EC8F9EB12A7DB19000EF8D87 /* SceneDelegate.swift */,
+				EC8F9EB32A7DB19000EF8D87 /* ViewController.swift */,
+				EC8F9EBA2A7DB19200EF8D87 /* LaunchScreen.storyboard */,
+				EC8F9EB82A7DB19200EF8D87 /* Assets.xcassets */,
+				EC8F9EBD2A7DB19200EF8D87 /* Info.plist */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -473,10 +473,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3KRQW7JR73;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = GithubFollowers/Info.plist;
+				INFOPLIST_FILE = GithubFollowers/Support/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -501,10 +500,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3KRQW7JR73;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = GithubFollowers/Info.plist;
+				INFOPLIST_FILE = GithubFollowers/Support/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
