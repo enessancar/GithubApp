@@ -23,6 +23,7 @@
 		EC8F9ED82A7E3A8200EF8D87 /* GFTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8F9ED72A7E3A8200EF8D87 /* GFTitleLabel.swift */; };
 		EC8F9EDA2A7E3AA300EF8D87 /* GFSecondaryLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8F9ED92A7E3AA300EF8D87 /* GFSecondaryLabel.swift */; };
 		EC8F9EDC2A7E4B1D00EF8D87 /* GFBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8F9EDB2A7E4B1D00EF8D87 /* GFBodyLabel.swift */; };
+		EC8F9EDF2A7E4CB300EF8D87 /* GFTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8F9EDE2A7E4CB300EF8D87 /* GFTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		EC8F9ED72A7E3A8200EF8D87 /* GFTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTitleLabel.swift; sourceTree = "<group>"; };
 		EC8F9ED92A7E3AA300EF8D87 /* GFSecondaryLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFSecondaryLabel.swift; sourceTree = "<group>"; };
 		EC8F9EDB2A7E4B1D00EF8D87 /* GFBodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFBodyLabel.swift; sourceTree = "<group>"; };
+		EC8F9EDE2A7E4CB300EF8D87 /* GFTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				EC8F9ED62A7E3A6F00EF8D87 /* Labels */,
+				EC8F9EDD2A7E4C9C00EF8D87 /* TextField */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -143,6 +146,14 @@
 				EC8F9EDB2A7E4B1D00EF8D87 /* GFBodyLabel.swift */,
 			);
 			path = Labels;
+			sourceTree = "<group>";
+		};
+		EC8F9EDD2A7E4C9C00EF8D87 /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				EC8F9EDE2A7E4CB300EF8D87 /* GFTextField.swift */,
+			);
+			path = TextField;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,6 +233,7 @@
 				EC8F9EDA2A7E3AA300EF8D87 /* GFSecondaryLabel.swift in Sources */,
 				EC8F9ED42A7E3A4800EF8D87 /* UIViewController+Ext.swift in Sources */,
 				EC8F9ED82A7E3A8200EF8D87 /* GFTitleLabel.swift in Sources */,
+				EC8F9EDF2A7E4CB300EF8D87 /* GFTextField.swift in Sources */,
 				EC8F9EC52A7E2CBA00EF8D87 /* CustomError.swift in Sources */,
 				EC8F9EB02A7DB19000EF8D87 /* AppDelegate.swift in Sources */,
 				EC8F9ECC2A7E33D200EF8D87 /* NetworkManager.swift in Sources */,
