@@ -26,6 +26,9 @@ final class SearchVC: UIViewController {
         
         view.addSubviews(logoImageView, usernameTextField, actionButton)
         configureLogoImageView()
+        configureTextField()
+        configureActionButton()
+        createDismissKeyboard()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -46,8 +49,13 @@ final class SearchVC: UIViewController {
     
     @objc private func pushFollowerListVC() {
         guard isUsernameEntered else {
-            
+            GFAlertVC(title: "Empty Username", message: "Please enter a username. We need the know who to look for ", buttonTitle: "Ok")
+            return
         }
+        
+        usernameTextField.resignFirstResponder()
+        
+        
     }
     
     private func configureLogoImageView() {
@@ -80,7 +88,6 @@ final class SearchVC: UIViewController {
         }
     }
 }
-
 
 extension SearchVC: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
