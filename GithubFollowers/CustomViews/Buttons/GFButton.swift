@@ -11,6 +11,7 @@ final class GFButton: UIButton {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        configure()
     }
     
     required init?(coder: NSCoder) {
@@ -24,6 +25,8 @@ final class GFButton: UIButton {
     }
     
     private func configure() {
-        
+        self.layer.cornerRadius = 10
+        self.setTitleColor(.white, for: .normal)
+        self.titleLabel?.font = .preferredFont(forTextStyle: .headline)
     }
 }
