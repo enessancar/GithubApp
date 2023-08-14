@@ -36,6 +36,27 @@ final class NetworkManager {
         task.resume()
     }
     
+    func getUserInfo(for username: String, completion: @escaping(Result<User, CustomError>) -> ()) {
+        let endpoint = baseURL + "\(username)"
+        guard let url = URL(string: endpoint) else {
+            completion(.failure(.invalidURL))
+            return
+        }
+        let task = URLSession.shared.dataTask(with: url) { data, _, error in
+            guard let data, error == nil else {
+                completion(.failure(.invalidData))
+                return
+            }
+            do {
+                let user = try JSONDecoder().decode(User.self, from: data)
+                completion(.success(user))
+            } catch {
+                completion(.failure(.unableToComplete))
+            }
+        }
+        task.resume()
+    }
+    
     func downloadImage(urlString: String, completion: @escaping (UIImage?) -> ()) {
         let cacheKey = NSString(string: urlString)
         

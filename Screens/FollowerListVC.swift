@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 final class FollowerListVC: UIViewController {
     
     enum Section {

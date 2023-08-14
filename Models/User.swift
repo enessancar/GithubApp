@@ -25,16 +25,4 @@ struct User: Decodable {
         case followers, following
         case createdAt = "created_at"
     }
-    
-    var _name: String {
-        name ?? "No avaialable"
-    }
-    
-    var _location: String {
-        location ?? "No location"
-    }
-    
-    var _bio: String {
-        bio ?? "No bio available"
-    }
 }
