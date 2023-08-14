@@ -7,7 +7,8 @@
 
 import UIKit
 
-final class FollowerListVC: GFDataLoadingVC {
+
+final class FollowerListVC: UIViewController {
     
     enum Section {
         case main
@@ -37,30 +38,16 @@ final class FollowerListVC: GFDataLoadingVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureViewController()
+        view.backgroundColor = .systemBackground
         
         getFollowers(username: username, page: page)
         configureCollectionView()
         configureDataSource()
-        configureSearchController()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: true)
-    }
-    
-    private func configureViewController() {
-        view.backgroundColor = .systemBackground
-        
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonTapped))
-    }
-    
-    private func configureSearchController() {
-        let searchController = UISearchController()
-        searchController.searchResultsUpdater = self
-        searchController.searchBar.placeholder = "Search for a username"
-        navigationItem.searchController = searchController
     }
     
     private func getFollowers(username: String, page: Int) {
@@ -71,38 +58,12 @@ final class FollowerListVC: GFDataLoadingVC {
                 if followers.count < 100 {
                     self.hasMoreFollowers = false
                 }
-                
-                if followers.isEmpty {
-                    let message = "This user doesnt have any followers"
-                    DispatchQueue.main.async {
-                        self.showEmptyStateView(message: message, view: self.view)
-                        return
-                    }
-                }
-                
                 self.followers = followers
                 self.updateData(followers: followers)
-                
             case .failure(let error):
                 self.presentGFAlert(title: "Bad stuff happened", message: error.rawValue, buttonTitle: "Ok")
             }
         }
-    }
-    
-    private func updateUI(with followers: [Follower]) {
-        if followers.count < 100 {
-            self.hasMoreFollowers = false
-        }
-        self.followers.append(contentsOf: followers)
-        
-        if self.followers.isEmpty {
-            let message = "This user doesn't have any followers. Go follow them 😁"
-            DispatchQueue.main.async {
-                self.showEmptyStateView(message: message, view: self.view)
-            }
-            return
-        }
-        self.updateData(followers: self.followers)
     }
     
     private func configureCollectionView() {
@@ -113,6 +74,7 @@ final class FollowerListVC: GFDataLoadingVC {
         collectionView.delegate = self
         
         collectionView.register(FollowerCell.self, forCellWithReuseIdentifier: FollowerCell.identifier)
+        
     }
     
     private func configureDataSource() {
@@ -146,38 +108,5 @@ extension FollowerListVC: UICollectionViewDelegate {
             page += 1
             getFollowers(username: username, page: page)
         }
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let activeArray = isSearching ? filteredFollowers : followers
-        let follower = activeArray[indexPath.item]
-        
-        let destVC = UserInfoVC(username: follower.login)
-        let nav = UINavigationController(rootViewController: destVC)
-        present(nav, animated: true)
-    }
-}
-
-extension FollowerListVC: UISearchResultsUpdating, UISearchBarDelegate {
-    func updateSearchResults(for searchController: UISearchController) {
-        guard let filter = searchController.searchBar.text, !filter.isEmpty else{
-            return
-        }
-        isSearching = true
-        filteredFollowers = followers.filter({ $0.login.lowercased().contains(filter.lowercased())})
-        updateData(followers: filteredFollowers)
-    }
-    
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        isSearching = false
-        updateData(followers: followers)
-    }
-}
-
-
-//MARK: - Objc Func
-extension FollowerListVC {
-    @objc private func addButtonTapped() {
-        showLoadingVC()
     }
 }

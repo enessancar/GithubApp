@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import SnapKit
 
 final class GFEmptyStateView: UIView {
     
@@ -49,13 +48,11 @@ final class GFEmptyStateView: UIView {
     
     private func configureLogoImageView() {
         logoImageView.image = Images.emptyStateLogo
-        logoImageView.contentMode = .scaleAspectFit
         
         logoImageView.snp.makeConstraints { make in
-            make.width.equalToSuperview().multipliedBy(1.3)
-            make.height.equalTo(snp.width).multipliedBy(1.3)
-            make.bottom.equalToSuperview().offset(40)
-            make.trailing.equalToSuperview().offset(170)
+            make.width.height.equalToSuperview().multipliedBy(1.3)
+            make.trailing.equalTo(snp.trailing).offset(140)
+            make.bottom.equalTo(snp.bottom).offset(55)
         }
     }
 }

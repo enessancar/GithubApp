@@ -10,8 +10,6 @@ import SnapKit
 
 final class GFUserInfoHeaderVC: UIViewController {
     
-    var user: User!
-    
     //MARK: - Properties
     private let avatarImageView = GFAvatarImageView(frame: .zero)
     private let usernameLabel = GFTitleLabel(textALignment: .left, fontSize: 34)
@@ -19,6 +17,11 @@ final class GFUserInfoHeaderVC: UIViewController {
     private let locationImageView = UIImageView()
     private let locationLabel = GFSecondaryLabel(fontSize: 18)
     private let bioLabel = GFBodyLabel(textAlignment: .left)
+    
+    private let padding: CGFloat = 20
+    private let textImagePadding: CGFloat = 12
+    
+    var user: User!
     
     init(user: User) {
         super.init(nibName: nil, bundle: nil)
@@ -33,70 +36,66 @@ final class GFUserInfoHeaderVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureView()
+        configureLayout()
+    }
+    
+    private func configureUIElements() {
+        avatarImageView.downloadImage(urlString: user.avatarURL)
+        usernameLabel.text = user.login
+        nameLabel.text = user._name
+        locationLabel.text = user._location
+        
+        locationImageView.image = SFSymbols.location
+        locationImageView.tintColor = .secondaryLabel
+        
+        bioLabel.text = user._bio
+        bioLabel.numberOfLines = 3
     }
     
     private func configureView() {
-        view.addSubviews(avatarImageView, usernameLabel, nameLabel, locationImageView, locationLabel, bioLabel)
-        layoutUI()
-        configureUIElements()
+        view.backgroundColor = .systemBackground
+        view.addSubviews(avatarImageView, usernameLabel, nameLabel, locationImageView)
+        view.addSubviews(locationLabel, bioLabel)
     }
     
-    private func layoutUI() {
-        let padding: CGFloat = 20
-        let textImagePadding: CGFloat = 12
-        
+    private func configureLayout() {
         avatarImageView.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(padding)
-            make.leading.equalToSuperview()
+            make.top.leading.equalToSuperview().offset(padding)
             make.width.height.equalTo(90)
         }
         
         usernameLabel.snp.makeConstraints { make in
             make.top.equalTo(avatarImageView.snp.top)
             make.leading.equalTo(avatarImageView.snp.trailing).offset(textImagePadding)
-            make.trailing.equalToSuperview().offset(-textImagePadding)
+            make.trailing.equalToSuperview().offset(-padding)
             make.height.equalTo(38)
         }
         
         nameLabel.snp.makeConstraints { make in
-            make.top.equalTo(usernameLabel.snp.bottom).offset(textImagePadding)
-            make.height.equalTo(18)
-            make.trailing.equalToSuperview().offset(-textImagePadding)
-            make.leading.equalTo(usernameLabel.snp.leading)
+            make.centerY.equalTo(avatarImageView.snp.centerY).offset(8)
+            make.leading.equalTo(avatarImageView.snp.trailing).offset(textImagePadding)
+            make.trailing.equalToSuperview().offset(-padding)
+            make.height.equalTo(20)
         }
         
         locationImageView.snp.makeConstraints { make in
-            make.top.equalTo(nameLabel.snp.bottom)
-            make.leading.equalTo(nameLabel.snp.leading)
-            make.width.equalTo(20)
+            make.bottom.equalTo(avatarImageView.snp.bottom)
+            make.leading.equalTo(avatarImageView.snp.trailing).offset(textImagePadding)
+            make.height.width.equalTo(20)
         }
         
         locationLabel.snp.makeConstraints { make in
             make.leading.equalTo(locationImageView.snp.trailing).offset(5)
-            make.trailing.equalToSuperview().offset(textImagePadding)
+            make.centerY.equalTo(locationImageView.snp.centerY)
+            make.trailing.equalToSuperview().offset(-padding)
             make.height.equalTo(20)
         }
         
         bioLabel.snp.makeConstraints { make in
             make.top.equalTo(avatarImageView.snp.bottom).offset(textImagePadding)
-            make.leading.equalTo(avatarImageView.snp.leading)
-            make.trailing.equalToSuperview().offset(textImagePadding)
-            make.height.equalTo(90)
+            make.leading.equalTo(avatarImageView.snp.trailing)
+            make.trailing.equalToSuperview().offset(-padding)
+            make.height.equalTo(60)
         }
     }
-    
-    private func configureUIElements() {
-        avatarImageView.downloadImage(urlString: user.avatarURL)
-        
-        usernameLabel.text = user.login
-        nameLabel.text = user.name ?? "N/A"
-        locationLabel.text = user.location ?? "No Location"
-        bioLabel.text = user.bio ?? "No bio avaliable"
-        bioLabel.numberOfLines = 3
-        
-        locationImageView.image = SFSymbols.location
-        locationImageView.tintColor = .secondaryLabel
-        
-    }
 }
-

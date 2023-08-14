@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class GFDataLoadingVC: UIViewController {
+final class GFDataLoadingVC: UIViewController {
     
     private var containerView: UIView!
     
