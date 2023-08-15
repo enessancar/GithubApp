@@ -108,4 +108,14 @@ extension FollowerListVC: UICollectionViewDelegate {
             getFollowers(username: username, page: page)
         }
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let activeArray = isSearching ? filteredFollowers : followers
+        let follower = activeArray[indexPath.item]
+        
+        let userInfoVC = UserInfoVC(username: follower.login)
+        
+        let navController = UINavigationController(rootViewController: userInfoVC)
+        present(navController, animated: true)
+    }
 }
