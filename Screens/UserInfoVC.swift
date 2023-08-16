@@ -10,9 +10,10 @@ import SnapKit
 
 final class UserInfoVC: UIViewController {
     
-    private let headerView = UIView()
+    private let headerView  = UIView()
     private let itemViewOne = UIView()
     private let itemViewTwo = UIView()
+    private let dateLabel   = GFBodyLabel(textAlignment: .center)
     private var itemViews: [UIView] = []
     
     private let padding: CGFloat = 20
@@ -47,6 +48,9 @@ final class UserInfoVC: UIViewController {
             case .success(let user):
                 DispatchQueue.main.async {
                     self.add(childVC: GFUserInfoHeaderVC(user: user), to: self.headerView)
+                    self.add(childVC: GFRepoItemVC(user: user), to: self.itemViewOne)
+                    self.add(childVC: GFFollowerItemVC(user: user), to: self.itemViewTwo)
+                    self.dateLabel.text = "GitHub Since \(user.createdAt.convertToMonthYearFormat())"
                 }
             case .failure(let error):
                 self.presentGFAlert(title: "Something went wrong", message: error.localizedDescription, buttonTitle: "Ok")
@@ -55,7 +59,7 @@ final class UserInfoVC: UIViewController {
     }
     
     private func layutUI() {
-        itemViews = [headerView, itemViewOne, itemViewTwo]
+        itemViews = [headerView, itemViewOne, itemViewTwo, dateLabel]
         for itemView in itemViews {
             view.addSubview(itemView)
             
@@ -64,9 +68,6 @@ final class UserInfoVC: UIViewController {
                 make.trailing.equalToSuperview().offset(-padding)
             }
         }
-        
-        itemViewOne.backgroundColor = .systemPink
-        itemViewTwo.backgroundColor = .systemBlue
         
         headerView.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
@@ -81,6 +82,11 @@ final class UserInfoVC: UIViewController {
         itemViewTwo.snp.makeConstraints { make in
             make.top.equalTo(itemViewOne.snp.bottom).offset(padding)
             make.height.equalTo(140)
+        }
+        
+        dateLabel.snp.makeConstraints { make in
+            make.top.equalTo(itemViewTwo.snp.bottom).offset(padding)
+            make.height.equalTo(18)
         }
     }
     

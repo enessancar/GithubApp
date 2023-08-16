@@ -37,8 +37,7 @@ final class FollowerListVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemBackground
-        
+        configureVC()
         getFollowers(username: username, page: page)
         configureCollectionView()
         configureDataSource()
@@ -47,6 +46,20 @@ final class FollowerListVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
+    private func configureVC() {
+        view.backgroundColor = .systemBackground
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonTapped))
+    }
+    
+    private func configureSearchController() {
+        let searchController = UISearchController()
+        searchController.searchResultsUpdater = self
+        searchController.searchBar.placeholder = "Search for a username"
+        navigationItem.searchController = searchController
     }
     
     private func getFollowers(username: String, page: Int) {
@@ -117,5 +130,25 @@ extension FollowerListVC: UICollectionViewDelegate {
         
         let navController = UINavigationController(rootViewController: userInfoVC)
         present(navController, animated: true)
+    }
+}
+
+extension FollowerListVC {
+    @objc private func addButtonTapped() {
+        
+    }
+}
+
+extension FollowerListVC: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let filter = searchController.searchBar.text, !filter.isEmpty else {
+            filteredFollowers.removeAll()
+            updateData(followers: followers)
+            isSearching = false
+            return
+        }
+        isSearching = true
+        filteredFollowers = followers.filter({ $0.login.lowercased().contains(filter.lowercased())})
+        updateData(followers: filteredFollowers)
     }
 }
