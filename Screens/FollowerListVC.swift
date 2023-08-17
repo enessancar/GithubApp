@@ -39,6 +39,7 @@ final class FollowerListVC: UIViewController {
         super.viewDidLoad()
         configureVC()
         getFollowers(username: username, page: page)
+        configureSearchController()
         configureCollectionView()
         configureDataSource()
     }

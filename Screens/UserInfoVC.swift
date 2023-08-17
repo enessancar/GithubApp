@@ -8,6 +8,11 @@
 import UIKit
 import SnapKit
 
+protocol UserInfoVCDelegate: AnyObject {
+    func didTapGithubProfile()
+    func didTapGetFollowers()
+}
+
 final class UserInfoVC: UIViewController {
     
     private let headerView  = UIView()
@@ -99,5 +104,15 @@ final class UserInfoVC: UIViewController {
     
     @objc private func dismissVC() {
         dismiss(animated: true)
+    }
+}
+
+extension UserInfoVC: UserInfoVCDelegate {
+    func didTapGithubProfile() {
+        <#code#>
+    }
+    
+    func didTapGetFollowers() {
+        <#code#>
     }
 }

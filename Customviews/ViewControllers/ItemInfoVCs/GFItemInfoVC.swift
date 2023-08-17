@@ -19,6 +19,8 @@ class GFItemInfoVC: UIViewController {
     private let padding: CGFloat = 20
     
     var user: User!
+    var delegate: UserInfoVCDelegate!
+    
     init(user: User) {
         super.init(nibName: nil, bundle: nil)
         self.user = user
