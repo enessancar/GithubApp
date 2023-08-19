@@ -109,10 +109,10 @@ final class UserInfoVC: UIViewController {
 
 extension UserInfoVC: UserInfoVCDelegate {
     func didTapGithubProfile() {
-        <#code#>
+        print("")
     }
     
     func didTapGetFollowers() {
-        <#code#>
+        print("")
     }
 }

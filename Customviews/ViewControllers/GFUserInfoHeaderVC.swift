@@ -37,6 +37,7 @@ final class GFUserInfoHeaderVC: UIViewController {
         super.viewDidLoad()
         configureView()
         configureLayout()
+        configureUIElements()
     }
     
     private func configureUIElements() {
@@ -60,21 +61,22 @@ final class GFUserInfoHeaderVC: UIViewController {
     
     private func configureLayout() {
         avatarImageView.snp.makeConstraints { make in
-            make.top.leading.equalToSuperview().offset(padding)
+            make.top.equalToSuperview().offset(padding)
+            make.leading.equalToSuperview()
             make.width.height.equalTo(90)
         }
         
         usernameLabel.snp.makeConstraints { make in
             make.top.equalTo(avatarImageView.snp.top)
             make.leading.equalTo(avatarImageView.snp.trailing).offset(textImagePadding)
-            make.trailing.equalToSuperview().offset(-padding)
+            make.trailing.equalToSuperview()
             make.height.equalTo(38)
         }
         
         nameLabel.snp.makeConstraints { make in
             make.centerY.equalTo(avatarImageView.snp.centerY).offset(8)
             make.leading.equalTo(avatarImageView.snp.trailing).offset(textImagePadding)
-            make.trailing.equalToSuperview().offset(-padding)
+            make.trailing.equalToSuperview()
             make.height.equalTo(20)
         }
         
@@ -87,14 +89,14 @@ final class GFUserInfoHeaderVC: UIViewController {
         locationLabel.snp.makeConstraints { make in
             make.leading.equalTo(locationImageView.snp.trailing).offset(5)
             make.centerY.equalTo(locationImageView.snp.centerY)
-            make.trailing.equalToSuperview().offset(-padding)
+            make.trailing.equalToSuperview()
             make.height.equalTo(20)
         }
         
         bioLabel.snp.makeConstraints { make in
             make.top.equalTo(avatarImageView.snp.bottom).offset(textImagePadding)
             make.leading.equalTo(avatarImageView.snp.trailing)
-            make.trailing.equalToSuperview().offset(-padding)
+            make.trailing.equalToSuperview()
             make.height.equalTo(60)
         }
     }

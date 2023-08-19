@@ -8,11 +8,11 @@
 import UIKit
 import SnapKit
 
-final class GFDataLoadingVC: UIViewController {
+class GFDataLoadingVC: UIViewController {
     
     private var containerView: UIView!
     
-    func showLoadingVC() {
+    func showLoadingView() {
         containerView = UIView(frame: view.bounds)
         view.addSubview(containerView)
         

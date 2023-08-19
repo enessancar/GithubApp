@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class FollowerListVC: UIViewController {
+final class FollowerListVC: GFDataLoadingVC {
     
     enum Section {
         case main
@@ -136,7 +136,31 @@ extension FollowerListVC: UICollectionViewDelegate {
 
 extension FollowerListVC {
     @objc private func addButtonTapped() {
+        showLoadingView()
         
+        NetworkManager.shared.getUserInfo(for: username) { [weak self] result in
+            guard let self else { return }
+            self.dismissLoadingView()
+            switch result {
+            case .success(let user):
+                
+                let favorite = Follower(login: user.login, avatarURL: user.avatarURL)
+                PersistenceManager.updateWith(favorite: favorite, actionType: .add) { [weak self] error in
+                    
+                    guard let self else {return}
+                    
+                    if error == nil  {
+                        self.presentGFAlert(title: "Success!", message: "You have successfully favorited this user" , buttonTitle: "Okey" )
+                        return
+                    } else if let error = error  {
+                        self.presentGFAlert(title: "Something went wrong?", message: error.localizedDescription  , buttonTitle: "Ok")
+                    }
+                }
+                
+            case .failure(let error):
+                self.presentGFAlert(title: "Error", message: error.localizedDescription, buttonTitle: "Ok")
+            }
+        }
     }
 }
 
